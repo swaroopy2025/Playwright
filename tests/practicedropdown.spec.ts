@@ -22,7 +22,7 @@ test.describe("Validating Dropdown", () => {
         await expect(page.locator('#male')).toBeChecked();
 
     })
-    test.only('Drop down in ClientApp rahulShetty Academy - Search based', async ({ page }) => {
+    test('Drop down in ClientApp rahulShetty Academy - Search based', async ({ page }) => {
 
         await page.goto('https://rahulshettyacademy.com/client/#/auth/login');
         await page.locator('#userEmail').fill('ashokkumar2028@gmail.com');
