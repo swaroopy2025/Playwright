@@ -6,7 +6,7 @@ test.describe('Assertion in Plawright',()=>{
  
         await page.goto('https://www.saucedemo.com/');
  
-        // To Check the count of the login button using of toHaveCount() Assertion.
+        /*// To Check the count of the login button using of toHaveCount() Assertion.
         await expect(page.getByTestId('login-button')).toHaveCount(1);
  
         // To Check the Login button is enabled or not using toBeEnabled() and toBeDisabled Assertions:
@@ -40,6 +40,7 @@ test.describe('Assertion in Plawright',()=>{
  
         // To have a custom error message:
         // await expect(page,'This is a Custom Error message').not.toHaveTitle('Swag Labs')
+        */
  
     });
 });

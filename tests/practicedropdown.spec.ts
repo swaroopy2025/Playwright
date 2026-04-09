@@ -14,7 +14,7 @@ test.describe("Validating Dropdown", () => {
     })
     test("handle dropdown tagname is select", async ({ page }) => {
         await page.locator('https://testautomationpractice.blogspot.com/');
-        await page.locator('#country', { hasText: "India" }).click();
+        //await page.locator('#country', { hasText: "India" }).click();
         await page.locator('#country').selectOption('India')
 
         //Select the Radio button
