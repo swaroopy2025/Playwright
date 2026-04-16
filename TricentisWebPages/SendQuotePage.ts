@@ -27,14 +27,18 @@ class sendQuotePage {
         this.navigateToMainmenu=page.locator("text='Main page'")
     }
 
-   async getsendQuote(){
+   async getsendQuote(email:string,
+                    phonenum:string,
+                    userName:string,
+                    passWord:string,
+                    comments:string){
 
-        await this.email.fill('testysr9100@gmail.com');
-        await this.phonenum.fill('4567891230');
-        await this.userName.fill('Swaroop');
-        await this.passWord.fill('Swaroop@123');
-        await this.confirmpassword.fill('Swaroop@123');
-        await this.comments.fill('This simulates pressing the TAB key once and moves focus to the next focusable element.')
+        await this.email.fill(email);
+        await this.phonenum.fill(phonenum);
+        await this.userName.fill(userName);
+        await this.passWord.fill(passWord);
+        await this.confirmpassword.fill(passWord);
+        await this.comments.fill(comments)
         await this.SendForQuote.click();
         //Printing message in Console
         console.log(await this.verifyAlert.textContent());
@@ -45,6 +49,5 @@ class sendQuotePage {
         //Navigate to main page
         await this.navigateToMainmenu.click();
     }
-
 }
 export {sendQuotePage}

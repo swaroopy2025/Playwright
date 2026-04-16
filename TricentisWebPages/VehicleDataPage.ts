@@ -33,17 +33,23 @@ class vehicleDataPage{
 
     }
 
-    async getvehicleData(){
+    async getvehicleData(enginePerformance:string,
+                        dateofmnf:string,
+                        paylod:string,
+                        totalWeight:string,
+                        listPrice:string,
+                        licenseNumber:string,
+                        annualMileage:string){
         await this.make.selectOption('BMW');
-        await this.enginePerformance.fill('1234');
-        await this.dateofmnf.fill('10/10/2025');
+        await this.enginePerformance.fill(enginePerformance);
+        await this.dateofmnf.fill(dateofmnf);
         await this.numOfSeats.selectOption('7');
         await this.fuel.selectOption('Diesel');
-        await this.paylod.fill('999');
-        await this.totalWeight.fill('22222');
-        await this.listPrice.fill('23222');
-        await this.licenseNumber.fill('1234567890');
-        await this.annualMileage.fill('4343');
+        await this.paylod.fill(paylod);
+        await this.totalWeight.fill(totalWeight);
+        await this.listPrice.fill(listPrice);
+        await this.licenseNumber.fill(licenseNumber);
+        await this.annualMileage.fill(annualMileage);
         await this.nextButton.click();
     }
 }

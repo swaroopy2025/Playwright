@@ -18,8 +18,8 @@ class productDataPage{
 
     }
 
-    async getproductData(){
-        await this.startDate.fill('10/10/2026');
+    async getproductData(startDate:string){
+        await this.startDate.fill(startDate);
         // Press TAB to move to next field
         await this.page.keyboard.press('Tab');
         await this.InsuranceSum.selectOption('5000000');

@@ -36,18 +36,24 @@ class insuranceDataPage{
         this.insurNext=page.locator('#nextenterproductdata')
 
     }
-    async getInsuranceData(){
-        await this.firstName.fill('Swaroop');
-        await this.lastName.fill('Reddy');
-        await this.birthDate.fill('09/09/1987');
+    async getInsuranceData(firstName:string,
+                        lastName:string,
+                        birthDate:string,
+                        Address:string,
+                        zipCode:string,
+                        city:string,
+                        webSite:string){
+        await this.firstName.fill(firstName);
+        await this.lastName.fill(lastName);
+        await this.birthDate.fill(birthDate);
         await this.gender.check({force:true});
-        await this.Address.fill('FREMONT,HYD');
+        await this.Address.fill(Address);
         await this.country.selectOption('India');
-        await this.zipCode.fill('123456');
-        await this.city.fill('HYDERABAD');
+        await this.zipCode.fill(zipCode);
+        await this.city.fill(city);
         await this.occupation.selectOption('Farmer');
         await this.hobbies.check({force:true});
-        await this.webSite.fill("https://sampleapp.tricentis.com/101/app.php");
+        await this.webSite.fill(webSite);
         //File upload
         // Path to your image
         const filepath = path.resolve('tests/VechileInsurance/1.png');

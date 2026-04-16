@@ -3,10 +3,8 @@ import { LoginPage } from "./LoginPage";
 import { vehicleDataPage } from "./VehicleDataPage";
 import { insuranceDataPage } from "./InsuranceDataPage";
 import { productDataPage } from "./ProductDataPage";
-import { selectPriceOption } from "./PriceOption";
+import {selectPriceOption} from './PriceOptionPage';
 import { sendQuotePage } from "./SendQuotePage";
-
-
 
 class PageManager{
     page:Page;
