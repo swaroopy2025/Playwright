@@ -63,6 +63,16 @@ test.describe("Vechile Insurance",()=>{
         await page.locator('#confirmpassword').fill('Swaroop@123');
         await page.locator('#Comments').fill('This simulates pressing the TAB key once and moves focus to the next focusable element.')
         await page.locator('#sendemail').click();
+        const loader = page.locator('.isloading-wrapper');
+
+        // Wait until loader appears (optional but safer)
+        await loader.waitFor({ state: 'visible' });
+
+        // Wait until loader disappears
+        await loader.waitFor({ state: 'hidden' });
+
+        // Continue with next steps
+        await expect(page.locator('#site-content')).toBeVisible();
         //Printing message in Console
         console.log(await page.locator('.showSweetAlert').textContent());
         //Verifying the success message
